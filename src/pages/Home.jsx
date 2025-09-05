@@ -11,51 +11,51 @@ const Home = () => {
   const features = [
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Built for speed and performance with modern technologies'
+      title: 'Real-time Monitoring',
+      description: 'Track your digital footprint across social media, email, and web presence'
     },
     {
       icon: Shield,
-      title: 'Secure by Design',
-      description: 'Enterprise-grade security with end-to-end encryption'
+      title: 'Threat Detection',
+      description: 'Get instant alerts when your personal data appears in data breaches'
     },
     {
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Work together seamlessly with real-time collaboration'
+      title: 'Privacy Insights',
+      description: 'Understand how your personal information is being used online'
     }
   ];
 
   const stats = [
-    { label: 'Active Users', value: '10K+', icon: Users, color: 'teal' },
-    { label: 'Projects Completed', value: '500+', icon: Target, color: 'yellow' },
-    { label: 'Customer Satisfaction', value: '99%', icon: Star, color: 'purple' },
-    { label: 'Uptime', value: '99.9%', icon: TrendingUp, color: 'green' }
+    { label: 'Data Sources Monitored', value: '50+', icon: Users, color: 'teal' },
+    { label: 'Threats Detected', value: '1.2K', icon: Target, color: 'yellow' },
+    { label: 'Privacy Score', value: '85%', icon: Star, color: 'purple' },
+    { label: 'Response Time', value: '<2min', icon: TrendingUp, color: 'green' }
   ];
 
   const achievements = [
     {
-      title: 'First Steps',
-      description: 'Complete your first project',
+      title: 'First Scan',
+      description: 'Complete your first security scan',
       icon: Trophy,
       unlocked: true
     },
     {
-      title: 'Power User',
-      description: 'Use Jupiter for 30 days',
+      title: 'Threat Hunter',
+      description: 'Detect your first security threat',
       icon: Zap,
       unlocked: true
     },
     {
-      title: 'Team Player',
-      description: 'Invite 5 team members',
+      title: 'Privacy Guardian',
+      description: 'Monitor 10+ data sources',
       icon: Users,
       unlocked: false,
       progress: 60
     },
     {
-      title: 'Achievement Hunter',
-      description: 'Unlock 10 achievements',
+      title: 'Security Expert',
+      description: 'Maintain 90%+ privacy score for 30 days',
       icon: Target,
       unlocked: false,
       progress: 30
@@ -64,15 +64,15 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechCorp',
-      content: 'Jupiter has revolutionized how we work. The interface is intuitive and the performance is outstanding.',
+      name: 'Alex Rodriguez',
+      role: 'Privacy Advocate',
+      content: 'Jupiter helped me discover my data was in 3 different breaches I never knew about. The monitoring is incredible.',
       rating: 5
     },
     {
-      name: 'Mike Chen',
-      role: 'CTO, StartupXYZ',
-      content: 'The best platform we\'ve used. It has everything we need and more.',
+      name: 'Sarah Kim',
+      role: 'Digital Nomad',
+      content: 'Finally, a tool that actually protects my personal information. The threat alerts saved me from identity theft.',
       rating: 5
     }
   ];
@@ -87,12 +87,12 @@ const Home = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="heading-primary mb-6">
-            Welcome to{' '}
-            <span className="gradient-text">Jupiter</span>
+            Monitor Your{' '}
+            <span className="gradient-text">Digital Life</span>
           </h1>
           <p className="text-xl text-zinc-400 mb-8 max-w-3xl mx-auto">
-            The next generation security monitoring platform that combines cutting-edge technology with 
-            beautiful design to deliver exceptional user experiences.
+            A personal security monitoring dashboard that tracks your digital footprint, 
+            monitors your online presence, and alerts you to potential security threats.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <InteractiveButton size="lg" variant="gradient" successText="Welcome!">
@@ -163,9 +163,9 @@ const Home = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="heading-secondary mb-4">Why Choose Jupiter?</h2>
+          <h2 className="heading-secondary mb-4">Why Personal Security Matters</h2>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            We've built Jupiter with the future in mind, combining the best of modern technology and design.
+            Your personal data is constantly at risk. Jupiter gives you the tools to monitor, protect, and control your digital privacy.
           </p>
         </motion.div>
 
@@ -238,16 +238,16 @@ const Home = () => {
           viewport={{ once: true }}
         >
           <Card className="max-w-4xl mx-auto bg-gradient-to-br from-zinc-800 to-zinc-900 border-teal-500/20">
-            <h2 className="heading-secondary mb-4">Ready to Get Started?</h2>
+            <h2 className="heading-secondary mb-4">Take Control of Your Privacy</h2>
             <p className="text-xl text-zinc-400 mb-8">
-              Join thousands of users who are already using Jupiter to transform their workflow.
+              Start monitoring your digital footprint today and protect yourself from data breaches and privacy threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <InteractiveButton size="lg" variant="gradient" successText="Welcome!">
-                Get Started
+              <InteractiveButton size="lg" variant="gradient" successText="Monitoring Started!">
+                Start Monitoring
               </InteractiveButton>
               <Button variant="secondary" size="lg">
-                Learn More
+                View Demo
               </Button>
             </div>
           </Card>
