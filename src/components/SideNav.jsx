@@ -4,9 +4,9 @@ import { Home, Info, Briefcase, Mail, Menu } from 'lucide-react';
 
 const SideNav = () => {
   const links = [
-    { path: '/', label: 'Home', icon: Home },
+    { path: '/', label: 'Dashboard', icon: Home },
     { path: '/about', label: 'About', icon: Info },
-    { path: '/services', label: 'Services', icon: Briefcase },
+    { path: '/services', label: 'Features', icon: Briefcase },
     { path: '/contact', label: 'Contact', icon: Mail },
   ];
 
@@ -39,19 +39,19 @@ const SideNav = () => {
       </ul>
       
       <div className="mt-8 p-4 bg-zinc-800 rounded-xl">
-        <h3 className="text-sm font-medium text-zinc-300 mb-2">Quick Stats</h3>
+        <h3 className="text-sm font-medium text-zinc-300 mb-2">Security Status</h3>
         <div className="space-y-2 text-xs text-zinc-400">
           <div className="flex justify-between">
-            <span>Users</span>
-            <span className="text-teal-400">1.2K</span>
+            <span>Threats</span>
+            <span className="text-red-400">3</span>
           </div>
           <div className="flex justify-between">
-            <span>Projects</span>
-            <span className="text-teal-400">45</span>
+            <span>Sources</span>
+            <span className="text-teal-400">12</span>
           </div>
           <div className="flex justify-between">
-            <span>Revenue</span>
-            <span className="text-teal-400">$12K</span>
+            <span>Privacy Score</span>
+            <span className="text-green-400">85%</span>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ const TopBar = () => {
   return (
     <div className="bg-zinc-900/80 backdrop-blur-sm border-b border-zinc-800 shadow-card p-4 flex justify-between items-center">
       <div className="flex items-center space-x-4">
-        <h1 className="text-xl font-bold gradient-text">Jupiter Landing</h1>
+        <h1 className="text-xl font-bold gradient-text">Jupiter Security</h1>
       </div>
       
       <div className="flex items-center space-x-4">
@@ -14,8 +14,8 @@ const TopBar = () => {
           <Bell size={20} />
         </button>
         
-        <InteractiveButton variant="gradient" successText="Welcome!">
-          Get Started
+        <InteractiveButton variant="gradient" successText="Monitoring Started!">
+          Start Monitoring
         </InteractiveButton>
         
         <div className="flex items-center space-x-2 bg-zinc-800 px-4 py-2 rounded-xl">
