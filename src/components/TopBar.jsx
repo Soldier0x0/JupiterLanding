@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bell, User, Settings } from 'lucide-react';
+import InteractiveButton from './InteractiveButton';
 
 const TopBar = () => {
   return (
@@ -13,9 +14,9 @@ const TopBar = () => {
           <Bell size={20} />
         </button>
         
-        <button className="btn-primary">
+        <InteractiveButton variant="gradient" successText="Welcome!">
           Get Started
-        </button>
+        </InteractiveButton>
         
         <div className="flex items-center space-x-2 bg-zinc-800 px-4 py-2 rounded-xl">
           <User size={16} className="text-zinc-400" />

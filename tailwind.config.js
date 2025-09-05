@@ -37,6 +37,8 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       borderRadius: {
         'xl': '1rem',
@@ -48,6 +50,11 @@ export default {
         'hover': '0 8px 16px rgba(0, 0, 0, 0.2)',
         'glow': '0 0 20px rgba(34, 211, 238, 0.3)',
         'glow-teal': '0 0 20px rgba(20, 184, 166, 0.3)',
+        // Neumorphic shadows inspired by CRED
+        'neumorphic-inset': 'inset 8px 8px 16px rgba(0, 0, 0, 0.3), inset -8px -8px 16px rgba(255, 255, 255, 0.05)',
+        'neumorphic-outset': '8px 8px 16px rgba(0, 0, 0, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.05)',
+        'neumorphic-pressed': 'inset 4px 4px 8px rgba(0, 0, 0, 0.4), inset -4px -4px 8px rgba(255, 255, 255, 0.03)',
+        'neumorphic-hover': '12px 12px 24px rgba(0, 0, 0, 0.4), -12px -12px 24px rgba(255, 255, 255, 0.08)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

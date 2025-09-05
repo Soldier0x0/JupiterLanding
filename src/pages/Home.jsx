@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Shield, Users, Star, CheckCircle } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Users, Star, CheckCircle, Trophy, Target, TrendingUp } from 'lucide-react';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import ScoreCard from '../components/ScoreCard';
+import AchievementBadge from '../components/AchievementBadge';
+import InteractiveButton from '../components/InteractiveButton';
 
 const Home = () => {
   const features = [
@@ -24,10 +27,39 @@ const Home = () => {
   ];
 
   const stats = [
-    { label: 'Active Users', value: '10K+' },
-    { label: 'Projects Completed', value: '500+' },
-    { label: 'Customer Satisfaction', value: '99%' },
-    { label: 'Uptime', value: '99.9%' }
+    { label: 'Active Users', value: '10K+', icon: Users, color: 'teal' },
+    { label: 'Projects Completed', value: '500+', icon: Target, color: 'yellow' },
+    { label: 'Customer Satisfaction', value: '99%', icon: Star, color: 'purple' },
+    { label: 'Uptime', value: '99.9%', icon: TrendingUp, color: 'green' }
+  ];
+
+  const achievements = [
+    {
+      title: 'First Steps',
+      description: 'Complete your first project',
+      icon: Trophy,
+      unlocked: true
+    },
+    {
+      title: 'Power User',
+      description: 'Use Jupiter for 30 days',
+      icon: Zap,
+      unlocked: true
+    },
+    {
+      title: 'Team Player',
+      description: 'Invite 5 team members',
+      icon: Users,
+      unlocked: false,
+      progress: 60
+    },
+    {
+      title: 'Achievement Hunter',
+      description: 'Unlock 10 achievements',
+      icon: Target,
+      unlocked: false,
+      progress: 30
+    }
   ];
 
   const testimonials = [
@@ -54,7 +86,7 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="heading-primary mb-6">
             Welcome to{' '}
             <span className="gradient-text">Jupiter</span>
           </h1>
@@ -63,11 +95,10 @@ const Home = () => {
             beautiful design to deliver exceptional user experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group">
+            <InteractiveButton size="lg" variant="gradient" successText="Welcome!">
               Get Started
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-            </Button>
-            <Button variant="outline" size="lg">
+            </InteractiveButton>
+            <Button variant="secondary" size="lg">
               Learn More
             </Button>
           </div>
@@ -84,10 +115,40 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="text-center">
-                <div className="text-3xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-sm text-zinc-400">{stat.label}</div>
-              </Card>
+              <ScoreCard
+                score={stat.value}
+                label={stat.label}
+                icon={stat.icon}
+                color={stat.color}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="heading-secondary mb-4">Your Achievements</h2>
+          <p className="text-xl text-zinc-400">Track your progress and unlock rewards</p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {achievements.map((achievement, index) => (
+            <motion.div
+              key={achievement.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <AchievementBadge {...achievement} />
             </motion.div>
           ))}
         </div>
@@ -102,7 +163,7 @@ const Home = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Why Choose Jupiter?</h2>
+          <h2 className="heading-secondary mb-4">Why Choose Jupiter?</h2>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
             We've built Jupiter with the future in mind, combining the best of modern technology and design.
           </p>
@@ -138,7 +199,7 @@ const Home = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">What Our Users Say</h2>
+          <h2 className="heading-secondary mb-4">What Our Users Say</h2>
           <p className="text-xl text-zinc-400">Don't just take our word for it</p>
         </motion.div>
 
@@ -177,16 +238,15 @@ const Home = () => {
           viewport={{ once: true }}
         >
           <Card className="max-w-4xl mx-auto bg-gradient-to-br from-zinc-800 to-zinc-900 border-teal-500/20">
-            <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <h2 className="heading-secondary mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-zinc-400 mb-8">
               Join thousands of users who are already using Jupiter to transform their workflow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group">
+              <InteractiveButton size="lg" variant="gradient" successText="Trial Started!">
                 Start Free Trial
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-              </Button>
-              <Button variant="outline" size="lg">
+              </InteractiveButton>
+              <Button variant="secondary" size="lg">
                 Contact Sales
               </Button>
             </div>
