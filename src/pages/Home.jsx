@@ -11,51 +11,51 @@ const Home = () => {
   const features = [
     {
       icon: Zap,
-      title: 'Instant Rewards',
-      description: 'Earn cashback and points on every purchase, automatically'
+      title: 'Lightning Fast',
+      description: 'Built for speed and performance with modern technologies'
     },
     {
       icon: Shield,
-      title: 'Bank-Level Security',
-      description: 'Your money is protected with the same security as major banks'
+      title: 'Secure by Design',
+      description: 'Enterprise-grade security with end-to-end encryption'
     },
     {
       icon: Users,
-      title: 'Smart Insights',
-      description: 'Get personalized tips to save more and spend smarter'
+      title: 'Team Collaboration',
+      description: 'Work together seamlessly with real-time collaboration'
     }
   ];
 
   const stats = [
-    { label: 'Happy Members', value: '2M+', icon: Users, color: 'teal' },
-    { label: 'Rewards Earned', value: '$50M+', icon: Target, color: 'yellow' },
-    { label: 'Credit Score Boost', value: '+85 pts', icon: Star, color: 'purple' },
-    { label: 'Average Savings', value: '$2,400', icon: TrendingUp, color: 'green' }
+    { label: 'Active Users', value: '10K+', icon: Users, color: 'teal' },
+    { label: 'Projects Completed', value: '500+', icon: Target, color: 'yellow' },
+    { label: 'Customer Satisfaction', value: '99%', icon: Star, color: 'purple' },
+    { label: 'Uptime', value: '99.9%', icon: TrendingUp, color: 'green' }
   ];
 
   const achievements = [
     {
-      title: 'First Purchase',
-      description: 'Make your first purchase with Jupiter',
+      title: 'First Steps',
+      description: 'Complete your first project',
       icon: Trophy,
       unlocked: true
     },
     {
-      title: 'Reward Collector',
-      description: 'Earn your first $100 in rewards',
+      title: 'Power User',
+      description: 'Use Jupiter for 30 days',
       icon: Zap,
       unlocked: true
     },
     {
-      title: 'Credit Builder',
-      description: 'Improve your credit score by 50+ points',
+      title: 'Team Player',
+      description: 'Invite 5 team members',
       icon: Users,
       unlocked: false,
       progress: 60
     },
     {
-      title: 'Savings Master',
-      description: 'Save $1,000 in your first year',
+      title: 'Achievement Hunter',
+      description: 'Unlock 10 achievements',
       icon: Target,
       unlocked: false,
       progress: 30
@@ -65,14 +65,14 @@ const Home = () => {
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      role: 'Marketing Manager',
-      content: 'I\'ve saved over $2,000 this year just by using Jupiter\'s smart features. The rewards are amazing!',
+      role: 'CEO, TechCorp',
+      content: 'Jupiter has revolutionized how we work. The interface is intuitive and the performance is outstanding.',
       rating: 5
     },
     {
       name: 'Mike Chen',
-      role: 'Freelance Designer',
-      content: 'My credit score went up 80 points in 6 months. Jupiter made building credit so easy.',
+      role: 'CTO, StartupXYZ',
+      content: 'The best platform we\'ve used. It has everything we need and more.',
       rating: 5
     }
   ];
@@ -87,12 +87,12 @@ const Home = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="heading-primary mb-6">
-            Your money,{' '}
-            <span className="gradient-text">simplified</span>
+            Welcome to{' '}
+            <span className="gradient-text">Jupiter</span>
           </h1>
           <p className="text-xl text-zinc-400 mb-8 max-w-3xl mx-auto">
-            The smart way to manage your finances, earn rewards, and build credit. 
-            No hidden fees, no complicated terms. Just simple, beautiful money management.
+            The next generation security monitoring platform that combines cutting-edge technology with 
+            beautiful design to deliver exceptional user experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <InteractiveButton size="lg" variant="gradient" successText="Welcome!">
@@ -163,9 +163,9 @@ const Home = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="heading-secondary mb-4">Why Members Love Jupiter</h2>
+          <h2 className="heading-secondary mb-4">Why Choose Jupiter?</h2>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Join millions who are already saving more, earning rewards, and building better credit with Jupiter.
+            We've built Jupiter with the future in mind, combining the best of modern technology and design.
           </p>
         </motion.div>
 
@@ -238,13 +238,13 @@ const Home = () => {
           viewport={{ once: true }}
         >
           <Card className="max-w-4xl mx-auto bg-gradient-to-br from-zinc-800 to-zinc-900 border-teal-500/20">
-            <h2 className="heading-secondary mb-4">Ready to Start Saving?</h2>
+            <h2 className="heading-secondary mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-zinc-400 mb-8">
-              Join millions of members who are already earning rewards and building better credit with Jupiter.
+              Join thousands of users who are already using Jupiter to transform their workflow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <InteractiveButton size="lg" variant="gradient" successText="Welcome!">
-                Join Jupiter
+                Get Started
               </InteractiveButton>
               <Button variant="secondary" size="lg">
                 Learn More
